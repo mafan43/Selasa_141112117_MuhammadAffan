@@ -16,7 +16,7 @@ namespace Latihan_2_1
         {
             InitializeComponent();
 
-            pilihbulan.SelectedItem = "Maret";
+            pilihbulan.SelectedItem = "Januari";
 
             DateTime mulai = new DateTime(2016, 1, 1);
             DateTime akhir = new DateTime(2017, 12, 31);
@@ -35,7 +35,7 @@ namespace Latihan_2_1
                         break;
                 }
             }
-            kalenderkeren.AddAnnuallyBoldedDate(new DateTime(1996, 03, 28));
+            kalenderkeren.AddAnnuallyBoldedDate(new DateTime(1996, 06, 16));
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
