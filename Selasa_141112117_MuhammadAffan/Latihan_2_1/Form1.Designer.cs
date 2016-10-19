@@ -1,4 +1,4 @@
-﻿namespace Latihan_2_1
+﻿namespace TugasCSharpLanjutanLatihan2
 {
     partial class Form1
     {
@@ -28,112 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pilihbulan = new System.Windows.Forms.DomainUpDown();
-            this.pilihtgl = new System.Windows.Forms.NumericUpDown();
-            this.kalenderkeren = new System.Windows.Forms.MonthCalendar();
-            this.tmbltambah = new System.Windows.Forms.Button();
-            this.tmblhapus = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pilihtgl)).BeginInit();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.LblTanggal = new System.Windows.Forms.Label();
+            this.LblBulan = new System.Windows.Forms.Label();
+            this.NuPTanggal = new System.Windows.Forms.NumericUpDown();
+            this.NuPBulan = new System.Windows.Forms.NumericUpDown();
+            this.BtnTambah = new System.Windows.Forms.Button();
+            this.BtnHapus = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.NuPTanggal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuPBulan)).BeginInit();
             this.SuspendLayout();
             // 
-            // pilihbulan
+            // monthCalendar1
             // 
-            this.pilihbulan.Items.Add("Januari");
-            this.pilihbulan.Items.Add("Februari");
-            this.pilihbulan.Items.Add("Maret");
-            this.pilihbulan.Items.Add("April");
-            this.pilihbulan.Items.Add("Mei");
-            this.pilihbulan.Items.Add("Juni");
-            this.pilihbulan.Items.Add("Juli");
-            this.pilihbulan.Items.Add("Agustus");
-            this.pilihbulan.Items.Add("September");
-            this.pilihbulan.Items.Add("Oktober");
-            this.pilihbulan.Items.Add("November");
-            this.pilihbulan.Items.Add("Desember");
-            this.pilihbulan.Location = new System.Drawing.Point(161, 28);
-            this.pilihbulan.Name = "pilihbulan";
-            this.pilihbulan.Size = new System.Drawing.Size(120, 20);
-            this.pilihbulan.TabIndex = 0;
-            this.pilihbulan.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.monthCalendar1.Location = new System.Drawing.Point(10, 81);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.ScrollChange = 4;
+            this.monthCalendar1.TabIndex = 4;
             // 
-            // pilihtgl
+            // LblTanggal
             // 
-            this.pilihtgl.Location = new System.Drawing.Point(12, 28);
-            this.pilihtgl.Maximum = new decimal(new int[] {
+            this.LblTanggal.AutoSize = true;
+            this.LblTanggal.Location = new System.Drawing.Point(36, 16);
+            this.LblTanggal.Name = "LblTanggal";
+            this.LblTanggal.Size = new System.Drawing.Size(52, 13);
+            this.LblTanggal.TabIndex = 5;
+            this.LblTanggal.Text = "Tanggal :";
+            // 
+            // LblBulan
+            // 
+            this.LblBulan.AutoSize = true;
+            this.LblBulan.Location = new System.Drawing.Point(43, 52);
+            this.LblBulan.Name = "LblBulan";
+            this.LblBulan.Size = new System.Drawing.Size(43, 13);
+            this.LblBulan.TabIndex = 6;
+            this.LblBulan.Text = "Bulan  :";
+            
+            // 
+            // NuPTanggal
+            // 
+            this.NuPTanggal.Location = new System.Drawing.Point(109, 14);
+            this.NuPTanggal.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
-            this.pilihtgl.Minimum = new decimal(new int[] {
-            1,
+            this.NuPTanggal.Name = "NuPTanggal";
+            this.NuPTanggal.Size = new System.Drawing.Size(39, 20);
+            this.NuPTanggal.TabIndex = 7;
+            // 
+            // NuPBulan
+            // 
+            this.NuPBulan.Location = new System.Drawing.Point(109, 50);
+            this.NuPBulan.Maximum = new decimal(new int[] {
+            12,
             0,
             0,
             0});
-            this.pilihtgl.Name = "pilihtgl";
-            this.pilihtgl.Size = new System.Drawing.Size(120, 20);
-            this.pilihtgl.TabIndex = 1;
-            this.pilihtgl.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.pilihtgl.ValueChanged += new System.EventHandler(this.pilihtgl_ValueChanged);
+            this.NuPBulan.Name = "NuPBulan";
+            this.NuPBulan.Size = new System.Drawing.Size(39, 20);
+            this.NuPBulan.TabIndex = 8;
+            this.NuPBulan.ValueChanged += new System.EventHandler(this.NuPBulan_ValueChanged);
             // 
-            // kalenderkeren
+            // BtnTambah
             // 
-            this.kalenderkeren.CalendarDimensions = new System.Drawing.Size(3, 3);
-            this.kalenderkeren.Location = new System.Drawing.Point(12, 87);
-            this.kalenderkeren.Name = "kalenderkeren";
-            this.kalenderkeren.TabIndex = 2;
-            this.kalenderkeren.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.kalenderkeren_DateChanged);
+            this.BtnTambah.Location = new System.Drawing.Point(196, 11);
+            this.BtnTambah.Name = "BtnTambah";
+            this.BtnTambah.Size = new System.Drawing.Size(96, 23);
+            this.BtnTambah.TabIndex = 9;
+            this.BtnTambah.Text = "Tambah Libur";
+            this.BtnTambah.UseVisualStyleBackColor = true;
+            this.BtnTambah.Click += new System.EventHandler(this.BtnTambah_Click);
             // 
-            // tmbltambah
+            // BtnHapus
             // 
-            this.tmbltambah.Location = new System.Drawing.Point(418, 24);
-            this.tmbltambah.Name = "tmbltambah";
-            this.tmbltambah.Size = new System.Drawing.Size(75, 23);
-            this.tmbltambah.TabIndex = 3;
-            this.tmbltambah.Text = "Tambah";
-            this.tmbltambah.UseVisualStyleBackColor = true;
-            this.tmbltambah.Click += new System.EventHandler(this.tmbltambah_Click);
-            // 
-            // tmblhapus
-            // 
-            this.tmblhapus.Location = new System.Drawing.Point(544, 24);
-            this.tmblhapus.Name = "tmblhapus";
-            this.tmblhapus.Size = new System.Drawing.Size(75, 23);
-            this.tmblhapus.TabIndex = 3;
-            this.tmblhapus.Text = "Hapus";
-            this.tmblhapus.UseVisualStyleBackColor = true;
-            this.tmblhapus.Click += new System.EventHandler(this.tmblhapus_Click);
+            this.BtnHapus.Location = new System.Drawing.Point(196, 47);
+            this.BtnHapus.Name = "BtnHapus";
+            this.BtnHapus.Size = new System.Drawing.Size(96, 23);
+            this.BtnHapus.TabIndex = 10;
+            this.BtnHapus.Text = "Hapus Libur";
+            this.BtnHapus.UseVisualStyleBackColor = true;
+            this.BtnHapus.Click += new System.EventHandler(this.BtnHapus_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 592);
-            this.Controls.Add(this.tmblhapus);
-            this.Controls.Add(this.tmbltambah);
-            this.Controls.Add(this.kalenderkeren);
-            this.Controls.Add(this.pilihtgl);
-            this.Controls.Add(this.pilihbulan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
+            this.ClientSize = new System.Drawing.Size(479, 400);
+            this.Controls.Add(this.BtnHapus);
+            this.Controls.Add(this.BtnTambah);
+            this.Controls.Add(this.NuPBulan);
+            this.Controls.Add(this.NuPTanggal);
+            this.Controls.Add(this.LblBulan);
+            this.Controls.Add(this.LblTanggal);
+            this.Controls.Add(this.monthCalendar1);
             this.Name = "Form1";
-            this.Text = "Latihan_2_1";
+            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pilihtgl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuPTanggal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuPBulan)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DomainUpDown pilihbulan;
-        private System.Windows.Forms.NumericUpDown pilihtgl;
-        private System.Windows.Forms.MonthCalendar kalenderkeren;
-        private System.Windows.Forms.Button tmbltambah;
-        private System.Windows.Forms.Button tmblhapus;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label LblTanggal;
+        private System.Windows.Forms.Label LblBulan;
+        private System.Windows.Forms.NumericUpDown NuPTanggal;
+        private System.Windows.Forms.NumericUpDown NuPBulan;
+        private System.Windows.Forms.Button BtnTambah;
+        private System.Windows.Forms.Button BtnHapus;
     }
 }
 
