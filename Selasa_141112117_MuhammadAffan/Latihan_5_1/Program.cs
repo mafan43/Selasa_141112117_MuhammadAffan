@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TugasCSharpLanjutanLatihan5_1
+namespace TugasCSharpLanjutanLatihan5
 {
     static class Program
     {

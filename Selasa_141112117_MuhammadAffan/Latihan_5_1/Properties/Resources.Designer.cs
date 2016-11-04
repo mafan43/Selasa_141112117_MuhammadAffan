@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TugasCSharpLanjutanLatihan5_1.Properties
+namespace TugasCSharpLanjutanLatihan5.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace TugasCSharpLanjutanLatihan5_1.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TugasCSharpLanjutanLatihan5_1.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TugasCSharpLanjutanLatihan5.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

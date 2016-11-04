@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TugasCSharpLanjutanLatihan5_1
+namespace TugasCSharpLanjutanLatihan5
 {
     public partial class FormEditor : Form
     {
@@ -16,15 +16,29 @@ namespace TugasCSharpLanjutanLatihan5_1
         {
             InitializeComponent();
         }
-
         private void FormEditor_Load(object sender, EventArgs e)
         {
-
+            PanelWarna.Hide();
+        }
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (treeView1.SelectedNode.Text == "Background Color")
+            {
+                PanelWarna.Show();
+                pictureBox1.Show();
+            }
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void PanelWarna_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }

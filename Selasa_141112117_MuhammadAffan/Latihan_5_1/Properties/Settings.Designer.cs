@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TugasCSharpLanjutanLatihan5_1.Properties
+namespace TugasCSharpLanjutanLatihan5.Properties
 {
 
 

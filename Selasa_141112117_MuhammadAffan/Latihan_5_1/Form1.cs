@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace TugasCSharpLanjutanLatihan5_1
+namespace TugasCSharpLanjutanLatihan5
 {
     public partial class Form1 : Form
     {
@@ -26,7 +26,6 @@ namespace TugasCSharpLanjutanLatihan5_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             foreach (FontFamily font in FontFamily.Families)
             {
 
@@ -34,7 +33,6 @@ namespace TugasCSharpLanjutanLatihan5_1
 
 
             }
-
 
             for (int i = 2; i <= 115; i += 2)
             {
@@ -81,6 +79,7 @@ namespace TugasCSharpLanjutanLatihan5_1
 
         private void tsbbtnUnderline_Click(object sender, EventArgs e)
         {
+
             Font UnderLine, NonUnderline;
             NonUnderline = richTextBox1.SelectionFont;
             if (NonUnderline.Underline)
@@ -98,23 +97,17 @@ namespace TugasCSharpLanjutanLatihan5_1
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+
             var Warna = new ColorDialog();
-            Warna.ShowDialog();
-            richTextBox1.ForeColor = Warna.Color;
-        }
-
-        private void CmbboxSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, float.Parse(CmbboxSize.SelectedItem.ToString()));
-        }
-
-        private void CmbboxFont_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            richTextBox1.Font = new Font(CmbboxFont.SelectedItem.ToString(), richTextBox1.Font.Size);
+            if (Warna.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.SelectionColor = Warna.Color;
+            }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+
             var Warna = new ColorDialog();
             if (Warna.ShowDialog() == DialogResult.OK)
             {
@@ -123,6 +116,13 @@ namespace TugasCSharpLanjutanLatihan5_1
         }
         String filename;
         Boolean Newfile = false;
+        private void newFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Newfile = true;
+            richTextBox1.Enabled = true;
+            richTextBox1.Text = "";
+            LblFileName.Text = "File Name : *Untitled";
+        }
 
         private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -178,17 +178,8 @@ namespace TugasCSharpLanjutanLatihan5_1
             }
         }
 
-        private void newFileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Newfile = true;
-            richTextBox1.Enabled = true;
-            richTextBox1.Text = "";
-            LblFileName.Text = "File Name : *Untitled";
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             if (richTextBox1.Modified)
             {
                 if (MessageBox.Show("File Belum Tersimpan ! Apakah anda ingin keluar ?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -216,6 +207,22 @@ namespace TugasCSharpLanjutanLatihan5_1
             LblFileName.Text = filename;
         }
 
+        private void CmbboxFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Font = new Font(CmbboxFont.SelectedItem.ToString(), richTextBox1.Font.Size);
+        }
+
+        private void CmbboxSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, float.Parse(CmbboxSize.SelectedItem.ToString()));
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEditor FormEditor = new FormEditor();
+            FormEditor.Show();
+        }
+
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Copy();
@@ -233,16 +240,12 @@ namespace TugasCSharpLanjutanLatihan5_1
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.SelectionStart,richTextBox1.SelectionLength);
-
+            richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.SelectionStart, richTextBox1.SelectionLength);
         }
 
-        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
-
-
-      
     }
 }
